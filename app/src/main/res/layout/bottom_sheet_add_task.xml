@@ -24,12 +24,12 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_marginStart="8dp"
                 app:srcCompat="@drawable/ic_baseline_clear_24"
-                android:layout_width="32dp"
-                android:layout_height="32dp"/>
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
-                android:text="Add Task"
+                android:text="@string/add_task"
                 style="@style/TextXLargeBold"/>
         </RelativeLayout>
         <View
@@ -43,9 +43,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edTaskName"
                 android:padding="10dp"
                 style="@style/TextXLargeBold"
-                android:hint="Input name task"
+                android:hint="@string/input_name_task"
                 android:paddingEnd="16dp"
                 android:paddingStart="16dp"
                 android:background="@android:color/transparent"
@@ -53,15 +54,99 @@
                 android:layout_height="wrap_content"/>
 
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edDescription"
                 android:layout_marginTop="8dp"
                 android:padding="10dp"
                 style="@style/TextLarge"
-                android:hint="Input description"
+                android:hint="@string/input_description"
                 android:paddingEnd="16dp"
                 android:paddingStart="16dp"
                 android:background="@android:color/transparent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/lnChooseDate"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="16dp"
+                    app:srcCompat="@drawable/ic_schedule"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:textColor="@color/colorGray"
+                    android:text="@string/choose_deadline"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_gravity="center_vertical"
+                    style="@style/TextNormal"/>
+            </LinearLayout>
         </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="8dp"
+            android:id="@+id/rvAttachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginTop="24dp"
+            android:background="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <RelativeLayout
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivFolder"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_folder"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivImage"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="12dp"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_picture"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCamera"
+                    android:padding="5dp"
+                    app:srcCompat="@drawable/ic_camera"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <View
+                    android:background="@color/colorGray"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSave"
+                    android:layout_marginStart="4dp"
+                   android:padding="8dp"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/save"
+                    android:textColor="@color/colorBlue"
+                    style="@style/TextNormalBold"/>
+            </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

@@ -25,5 +25,5 @@ data class TaskEntity(
     @ColumnInfo(name = "is_importance")
     var IsImportance : Boolean? = null,
     @ColumnInfo(name = "file")
-    var File : File? = null
+    var Files : ArrayList<File>? = null
 )
